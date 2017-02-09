@@ -3,4 +3,4 @@ Asignatura de Análisis y diseño en el Software del segundo curso del Doble Gra
 
 ### Autor
 * [David García Fernández] (https://github.com/DavidGarciaFer/)
-* Luis Cárabe
+* [Luis Cárabe] (https://github.com/luiscarabe)
