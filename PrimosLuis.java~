@@ -1,0 +1,32 @@
+
+
+
+public class PrimosLuis{
+	public static void main(String[] args){
+		int aux = args.length;
+		if (aux < 1){
+			System.out.println("Error en los parámetros de entrada, inserta al menos un número.");
+			return;
+		}
+		int[] numeros = new int[aux];
+
+		for(int i = 0; i < aux; i++){
+			numeros[i] = Integer.parseInt(args[i]);
+			if (numeros[i] > 1){
+				int flag = 0;
+				for(int j = (numeros[i]-1); j > 1 ; j--){
+					int aux2;
+					aux2 = numeros[i] % j;
+					if (aux2 == 0){
+						System.out.println("El número " + numeros[i] + " no es primo.");
+						flag = 1;
+						break;
+					}
+				}
+				if (flag == 0){
+					System.out.println("El número " + numeros[i] + " es primo.");
+				}
+			}
+		} 
+	}		
+}
