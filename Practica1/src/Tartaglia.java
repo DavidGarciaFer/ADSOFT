@@ -43,7 +43,7 @@ public class Tartaglia{
             }
             /**
             * Recorremos el vector y solo imprimimos los elementos que sean
-            * ditintos de cero.
+            * distintos de cero.
             */
             for(int m : fila1){
                 if(m != 0){
