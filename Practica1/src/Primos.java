@@ -5,7 +5,7 @@
 * @author David Garcia (david.garcia03@estudiante.uam.es)
 */
 
-public class PrimosDavid{
+public class Primos{
 	/**
 	* Punto de entrada de la aplicacion.
 	*
@@ -28,9 +28,9 @@ public class PrimosDavid{
         for (String arg : args){
             int n = Integer.parseInt(arg);
             if(n != 1 && n != 0){ //En caso contrario no los comprobamos ya que no son primos
-                /**
+                /*
                 * Para hacer la comprobación solo comprobaremos los divisores
-                * hasta la raiz cuadrada del numero que queremos comprobar (en * parte entera)
+                * hasta la raiz cuadrada del numero que queremos comprobar (en parte entera)
                 */
                 noprimo = 0;
                 for(int i = 2; i <= Math.sqrt(n) && noprimo != 1; i++){

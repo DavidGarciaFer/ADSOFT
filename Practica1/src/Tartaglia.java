@@ -26,7 +26,7 @@ public class Tartaglia{
         int[] fila1 = new int[n]; // Aqui guardaremos la fila anterior
         //int[] fila2 = new int[n]; // Sobre esta fila trabajamos
 
-        /**
+        /*
         * Iteramos sobre el numero de filas que tendra la piramide
         */
 
@@ -41,7 +41,7 @@ public class Tartaglia{
                     fila1[j] = padre1 + padre2;
                 }
             }
-            /**
+            /*
             * Recorremos el vector y solo imprimimos los elementos que sean
             * distintos de cero.
             */
