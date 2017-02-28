@@ -47,7 +47,7 @@ public class Autoescuela {
 	 * @param profesor Nuevo trabajador contratado
 	 * @param dia Dia de vigencia
 	 * @param mes Mes de vigencia
-	 * @param anyo Año de vigencia
+	 * @param anyo anyo de vigencia
 	 * @param sueldoBase Sueldo base del profesor
 	 * */
 	
@@ -132,7 +132,7 @@ public class Autoescuela {
 	 * @param dni DNI del profesor al que se le acaba el contrato
 	 * @param dia Dia de vencimiento
 	 * @param mes Mes de vencimiento
-	 * @param anyo Año de vencimiento
+	 * @param anyo anyo de vencimiento
 	 * 
 	 * @return Un valor booleano. True si la accion se realizo satisfactoriamente
 	 * y False si hubo algun error.
@@ -154,7 +154,7 @@ public class Autoescuela {
 	 * @param dni DNI del profesor al que se traslada
 	 * @param dia Dia de traslado
 	 * @param mes Mes de traslado
-	 * @param anyo Año de traslado
+	 * @param anyo anyo de traslado
 	 * @param a2 Sede a la que se traslada el profesor
 	 * 
 	 * @return Un valor booleano. True si la accion se realizo satisfactoriamente
@@ -172,6 +172,31 @@ public class Autoescuela {
 			return false;
 		}
 		return true;
+	}
+	
+	/**
+	 * Este metodo imprime por pantalla los periodos en los que un profesor
+	 * ha trabajado en la autoescuela
+	 */
+	
+	public void imprimirPeriodos(){
+		int i = 0;
+		for(Contrato cont : this.getContratos()){
+			if(i >= this.getActual())
+				break;
+			i++;
+			if((cont.getFin()).isFechaValida() == true){
+				System.out.println("El profesor/a "+(cont.getProfesor()).getNombre()+" "
+								+(cont.getProfesor().getApellidos())+" trabajó en la autoescuela "
+								+this.getNombre() +" desde el "+cont.getIni().getFecha() +" hasta "
+								+cont.getFin().getFecha());
+			}
+			else{
+				System.out.println("El profesor/a "+(cont.getProfesor()).getNombre()+" "
+						+(cont.getProfesor().getApellidos())+" ha trabajado en la autoescuela "
+						+this.getNombre() +" desde el "+cont.getIni().getFecha() +" hasta la actualidad");
+			}
+		}
 	}
 
 }

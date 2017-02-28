@@ -23,10 +23,10 @@ public class Contrato {
 	 * 
 	 * @param dia1 Dia de inicio del contrato
 	 * @param mes1 Mes de inicio del contrato
-	 * @param anyo1 Año de inicio del contrato
+	 * @param anyo1 anyo de inicio del contrato
 	 * @param dia2 Dia de fin del contrato
 	 * @param mes2 Mes de fin del contrato
-	 * @param anyo2 Año de fin del contrato
+	 * @param anyo2 anyo de fin del contrato
 	 * @param profesor Profesor contratado por la autoescuela
 	 * @param sueldoBase Cantidad fija que gana el profesor al mes
 	 */
@@ -45,7 +45,7 @@ public class Contrato {
 	 * 
 	 * @param dia1 Dia de inicio del contrato
 	 * @param mes1 Mes de inicio del contrato
-	 * @param anyo1 Año de inicio del contrato
+	 * @param anyo1 anyo de inicio del contrato
 	 * @param profesor Profesor contratado por la autoescuela
 	 * @param sueldoBase Cantidad fija que gana el profesor al mes
 	 */
@@ -62,7 +62,7 @@ public class Contrato {
 	 * 
 	 * @param dia1 Dia de vencimiento del contrato
 	 * @param mes1 Mes de vencimeinto
-	 * @param anyo1 Año de vencimiento
+	 * @param anyo1 anyo de vencimiento
 	 */
 	
 	public void setFin(int dia1, int mes1, int anyo1){

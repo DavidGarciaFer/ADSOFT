@@ -40,47 +40,9 @@ public class MainEj4 {
 		/*Son despedidos*/
 		a1.despedir(03143222, 21, 10, 2017);
 		
-		/*Obtenemos datos*/
-		int i = 0;
-		
-		/*Obtenemos los datos para la primera autoescuela*/
-		for(Contrato cont : a1.getContratos()){
-			if(i >= a1.getActual())
-				break;
-			i++;
-			if((cont.getFin()).isFechaValida() == true){
-				System.out.println("El profesor/a "+(cont.getProfesor()).getNombre()+" "
-								+(cont.getProfesor().getApellidos())+" trabajó en la autoescuela "
-								+a1.getNombre() +" desde el "+cont.getIni().getFecha() +" hasta "
-								+cont.getFin().getFecha());
-			}
-			else{
-				System.out.println("El profesor/a "+(cont.getProfesor()).getNombre()+" "
-						+(cont.getProfesor().getApellidos())+" ha trabajado en la autoescuela "
-						+a1.getNombre() +" desde el "+cont.getIni().getFecha() +" hasta la actualidad");
-			}
-		}
-		
-		i=0;
-		
-		/*Obtenemos los datos para la segunda autoescuela*/
-		for(Contrato cont : a2.getContratos()){
-			if(i >= a2.getActual()){
-				break;
-			}
-			i++;
-			if((cont.getFin()).isFechaValida() == true){
-				System.out.println("El profesor/a "+(cont.getProfesor()).getNombre()+" "
-								+(cont.getProfesor().getApellidos())+" trabajó en la autoescuela "
-								+a2.getNombre() +" desde el "+cont.getIni().getFecha() +" hasta "
-								+cont.getFin().getFecha());
-			}
-			else{
-				System.out.println("El profesor/a "+(cont.getProfesor()).getNombre()+" "
-						+(cont.getProfesor().getApellidos())+" ha trabajado en la autoescuela "
-						+a2.getNombre() +" desde el "+cont.getIni().getFecha() +" hasta la actualidad");
-			}
-		}
+		/*Obtenemos los datos para las autoescuelas*/
+		a1.imprimirPeriodos();
+		a2.imprimirPeriodos();
 		
 	}
 }
