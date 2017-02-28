@@ -147,5 +147,31 @@ public class Autoescuela {
 		}
 		return false;
 	}
+	
+	/**
+	 * Este metodo traslada un profesor de una sede a otra
+	 * 
+	 * @param dni DNI del profesor al que se traslada
+	 * @param dia Dia de traslado
+	 * @param mes Mes de traslado
+	 * @param anyo Año de traslado
+	 * @param a2 Sede a la que se traslada el profesor
+	 * 
+	 * @return Un valor booleano. True si la accion se realizo satisfactoriamente
+	 * y False si hubo algun error.
+	 */
+	
+	public boolean trasladarProfesor(int dni, int dia, int mes, int anyo, Autoescuela a2){
+		for(Contrato cont : this.contratos){
+			if((cont.getProfesor()).getDNI() == dni){
+				a2.addContrato(cont.getProfesor(), dia, mes, anyo, cont.getSueldoBase());
+				break;
+			}	
+		}
+		if(this.despedir(dni, dia, mes, anyo) == false){
+			return false;
+		}
+		return true;
+	}
 
 }
