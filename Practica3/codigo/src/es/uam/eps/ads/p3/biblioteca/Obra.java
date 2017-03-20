@@ -40,7 +40,7 @@ public abstract class Obra {
 	 * @return Un entero con el numero de dias de plazo
 	 */
 
-	public int getPlazo() {
+	public int plazoPrestamo() {
 		return plazo;
 	}
 	
@@ -115,6 +115,7 @@ public abstract class Obra {
 		this.ejemplares.add(ejemplar);
 	}
 	
+
 	public boolean equals(Obra o){
 		if(this.titulo == o.getTitulo() && this.autor == o.getAutor()){
 			return true;

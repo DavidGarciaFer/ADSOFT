@@ -12,7 +12,7 @@ public class Empleado extends Usuario{
 	public void sancionarPorRetraso(int dias){
 		if (dias >= getnSanciones()){
 			// Sancionamos
-			sancion += dias*2.5;
+			sancion += (dias+getnSanciones())*2.5;
 		}
 		// En caso contrario la sancion se perdona
 	}

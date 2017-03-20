@@ -37,6 +37,6 @@ public class TesterApartado3 {
 	     System.out.println( "\nPréstamos actuales de " + u1 + "\n" + u1.getPrestamos() );
 	     
 	     System.out.println( "Num. prestamos realizados: " + Prestamo.numPrestamosHistoricos() );   // 8 segun mis cuentas
-	     System.out.println( "Num. prestamos pendientes: " + Prestamo.numPrestamosPendientes() );  // 5 segun mis cuentas   
+	     System.out.println( "Num. prestamos pendientes: " + Prestamo.numPrestamosPendientes() );  // 5 segun mis cuentas
 	  }
  }

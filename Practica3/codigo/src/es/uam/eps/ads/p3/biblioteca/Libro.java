@@ -80,7 +80,7 @@ public class Libro extends Obra{
 		this.setVecesPrestado(1);
 		// Comprobamos si es necesario decrementar los plazos
 		if (this.getVecesPrestado() % 10 == 0){
-			int plazo = this.getPlazo();
+			int plazo = this.plazoPrestamo();
 			// Solo decrementamos si el numero de dias es al menos 7
 			if (plazo > 7){
 				this.setPlazo(plazo - 1);
@@ -91,6 +91,6 @@ public class Libro extends Obra{
 	@Override
 	public String toString(){
 		return "[L:"+this.getTitulo()+", de "+this.getAutor()+" ("+this.getAnyo()
-				+") plazo:"+this.getPlazo()+"]";
+				+") plazo:"+this.plazoPrestamo()+"]";
 	}
 }

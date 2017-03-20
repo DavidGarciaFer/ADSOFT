@@ -62,7 +62,7 @@ public class Pelicula extends Obra{
 	@Override	
 	public String toString(){
 		return "[P:"+this.getTitulo()+", de "+this.getAutor()+" ("+this.getAnyo()
-				+")plazo:"+this.getPlazo()+"]";
+				+")plazo:"+this.plazoPrestamo()+"]";
 	}
 	
 }

@@ -46,7 +46,6 @@ public class Ejemplar {
 			return null;
 		}
 		Prestamo p = new Prestamo(this, user);
-		
 		/*
 		 * El siguiente metodo comprueba si el usuario puede
 		 * tomar prestado el ejemplar
@@ -58,18 +57,19 @@ public class Ejemplar {
 		}
 		this.prestamo = p;
 		Prestamo.setnumHistoricos(Prestamo.numPrestamosHistoricos()+1);
-		Prestamo.setnumPendientes(Prestamo.numPrestamosPendientes()+1);
+		Prestamo.addNuevoPrestamo(this.prestamo);
 		return this.prestamo;
 	}
 	
-	public void devolver(){
+	public boolean devolver(){
 		if(this.prestamo == null)
-			return;
+			return false;
+		Prestamo.devolucion(this.prestamo);
 		// Eliminamos el prestamo del array del usuario
 		this.prestamo.getUsuario().eliminarPrestamo(this.prestamo);
 		// Eliminamos el prestamo de la referencia del ejemplar
 		this.prestamo = null;
-		Prestamo.setnumPendientes(Prestamo.numPrestamosPendientes()-1);
+		return true;
 	}
 	
 	@Override	

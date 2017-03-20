@@ -14,7 +14,7 @@ public class Publico extends Usuario{
 		}
 		else if(dias > bonificacion){
 			// La ponemos a 0 para que no sea un número negativo
-			bonificacion = 1;
+			bonificacion = 0;
 		} else {
 			bonificacion = bonificacion - (dias+1); // +1 porque el numero de bonificacion empieza en 1
 		}

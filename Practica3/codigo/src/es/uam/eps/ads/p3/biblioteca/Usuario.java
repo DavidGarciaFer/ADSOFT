@@ -78,7 +78,7 @@ public abstract	class Usuario {
 	
 	/**
 	 * Elimina el prestamo seleccionado de la lista de prestamos,
-	 * si existe.
+	 * si existe. Aplica las sanciones necesarias.
 	 * @param prestamo El prestamo a borrar
 	 * @return true si se ha realizado correctamente la devolucion,
 	 * false si no existia el prestamo
@@ -90,6 +90,11 @@ public abstract	class Usuario {
 		}	
 		this.prestamos.remove(prestamo);
 		this.nPrestados--;
+		// Aquí aplicamos la sanción si es necesaria
+		int retraso = prestamo.diasAtrasado();
+		if(retraso > this.nSanciones){
+			this.sancionarPorRetraso(retraso - this.nSanciones);
+		}
 		return true;
 	}
 
