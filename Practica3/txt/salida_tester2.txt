@@ -1,0 +1,5 @@
+u2.equals(u3): false
+u4.equals(u5): true
+obra3.equals(obra4): true
+e23.equals(e14): false
+

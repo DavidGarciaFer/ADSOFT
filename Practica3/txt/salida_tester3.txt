@@ -1,0 +1,21 @@
+{1[L:La Caverna, de Saramago (2000) plazo:25](disponible)}
+{10[L:Crepúsculo, de Meyer (2011) plazo:25](disponible)}
+{1[L:La Caverna, de Saramago (2000) plazo:25](prestado)] prestado a  [P: Ramón,ppb:1,ps:2] hasta 2017-03-26
+{4[P:Atame, de Almodóvar (1990)plazo:2](prestado)] prestado a  [P: Ramón,ppb:2,ps:2] hasta 2017-03-03
+null
+{7[L:Crepúsculo, de Meyer (2008) plazo:25](prestado)] prestado a  [E: Marta] hasta 2017-03-26
+{2[L:La Caverna, de Saramago (2000) plazo:25](prestado)] prestado a  [E: Marta] hasta 2017-03-26
+{5[P:Atame, de Almodóvar (1990)plazo:2](prestado)] prestado a  [E: Marta] hasta 2017-03-03
+null
+{8[L:Crepúsculo, de Meyer (2008) plazo:25](prestado)] prestado a  [P: Ana,ppb:1,ps:2] hasta 2017-03-26
+null
+null
+{9[L:Crepúsculo, de Meyer (2008) plazo:25](prestado)] prestado a  [P: Ana,ppb:1,ps:2] hasta 2017-03-26
+
+Fecha simulada: 2017-03-04
+{5[P:Atame, de Almodóvar (1990)plazo:2](prestado)] prestado a  [P: Ramón,ppb:1,ps:3] hasta 2017-03-06
+
+Préstamos actuales de [P: Ramón,ppb:1,ps:3]
+[{1[L:La Caverna, de Saramago (2000) plazo:25](prestado)] prestado a  [P: Ramón,ppb:1,ps:3] hasta 2017-03-26, {5[P:Atame, de Almodóvar (1990)plazo:2](prestado)] prestado a  [P: Ramón,ppb:1,ps:3] hasta 2017-03-06]
+Num. prestamos realizados: 8
+Num. prestamos pendientes: 5

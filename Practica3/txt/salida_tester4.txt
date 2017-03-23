@@ -1,0 +1,23 @@
+Vencen hoy 2017-03-03
+[{4[P:Atame, de Almodóvar (1990)plazo:2](prestado)] prestado a  [E: Marta] hasta 2017-03-03]
+
+Vencen hoy 2017-03-26
+[{1[L:La Caverna, de Saramago (2000) plazo:25](prestado)] prestado a  [P: Ramón,ppb:2,ps:2] hasta 2017-03-26, {7[L:Crepúsculo, de Meyer (2008) plazo:25](prestado)] prestado a  [P: Ramón,ppb:2,ps:2] hasta 2017-03-26]
+
+Pasados de vencimiento 2017-03-26
+[{4[P:Atame, de Almodóvar (1990)plazo:2](prestado)] prestado a  [E: Marta] hasta 2017-03-03]
+
+Pasados de vencimiento 2017-03-27
+{1[L:La Caverna, de Saramago (2000) plazo:25](prestado)] prestado a  [P: Ramón,ppb:2,ps:2] hasta 2017-03-26
+{4[P:Atame, de Almodóvar (1990)plazo:2](prestado)] prestado a  [E: Marta] hasta 2017-03-03
+{7[L:Crepúsculo, de Meyer (2008) plazo:25](prestado)] prestado a  [P: Ramón,ppb:2,ps:2] hasta 2017-03-26
+-----
+
+Pasados de vencimiento 2017-03-30
+{1[L:La Caverna, de Saramago (2000) plazo:25](disponible)} prestado a  [P: Ramón,ppb:0,ps:2] hasta 2017-03-26 devuelto 2017-03-30
+{4[P:Atame, de Almodóvar (1990)plazo:2](disponible)} prestado a  [E: Marta $67.5] hasta 2017-03-03 devuelto 2017-03-30
+{7[L:Crepúsculo, de Meyer (2008) plazo:25](disponible)} prestado a  [P: Ramón,ppb:0,ps:2] hasta 2017-03-26 devuelto 2017-03-30
+{2[L:La Caverna, de Saramago (2000) plazo:25](disponible)} prestado a  [E: Marta $67.5] hasta 2017-03-28 devuelto 2017-03-30
+
+Ya no debe haber préstamos pasados de vencimiento 
+[]
