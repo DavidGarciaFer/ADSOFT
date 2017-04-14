@@ -12,5 +12,5 @@ public interface IPhysicalUnit {
 	double transformTo(double d, IPhysicalUnit u) throws QuantityException;
 	Quantity getQuantity();
 	String abbrev();
-	/*IMetricSystem getMetricSystem(); No implementar de momento en este apartado*/
+	IMetricSystem getMetricSystem(); 
 }

@@ -26,5 +26,10 @@ public class TimeUnit extends PhysicalUnit{
 			return "h";
 		return "ms";
 	}
+
+	@Override
+	public IMetricSystem getMetricSystem() {
+		return super.getSystem();
+	}
 		
 }

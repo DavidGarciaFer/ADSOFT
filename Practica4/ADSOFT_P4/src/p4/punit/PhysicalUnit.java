@@ -18,7 +18,12 @@ public abstract class PhysicalUnit implements IPhysicalUnit{
 		if((this.getQuantity().equals(Quantity.TIEMPO) && u.getQuantity().equals(Quantity.LONGITUD))
 				|| (this.getQuantity().equals(Quantity.LONGITUD)) && u.getQuantity().equals(Quantity.TIEMPO))
 			return false;
-		return this.sys.equals(((PhysicalUnit) u).getSystem());
+		if(!this.sys.equals(((PhysicalUnit) u).getSystem())){
+			if(this.sys.getConverter(u.getMetricSystem()) != null){
+				return true;
+			}
+		}
+		return true;
 	}
 		
 	public IMetricSystem getSystem(){

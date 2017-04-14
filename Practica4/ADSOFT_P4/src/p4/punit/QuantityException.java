@@ -19,6 +19,6 @@ public class QuantityException extends Exception{
 	
 	@Override 
 	public String toString(){
-		return "Quantities "+q1+" and "+q2+" are not compatible.";
+		return "Quantities "+q2+" and "+q1+" are not compatible.";
 	}
 }
