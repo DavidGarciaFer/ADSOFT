@@ -18,9 +18,10 @@ public abstract class PhysicalUnit implements IPhysicalUnit{
 		if((this.getQuantity().equals(Quantity.TIEMPO) && u.getQuantity().equals(Quantity.LONGITUD))
 				|| (this.getQuantity().equals(Quantity.LONGITUD)) && u.getQuantity().equals(Quantity.TIEMPO))
 			return false;
-		if(!this.sys.equals(((PhysicalUnit) u).getSystem())){
-			if(this.sys.getConverter(u.getMetricSystem()) != null){
-				return true;
+		// Si el conversor no ha sido agregado no podemos transformar de una unidad a otra
+		if(this.sys.equals(((PhysicalUnit) u).getSystem()) == false){
+			if(sys.getConverter(u.getMetricSystem()) == null){
+				return false;
 			}
 		}
 		return true;
@@ -33,13 +34,8 @@ public abstract class PhysicalUnit implements IPhysicalUnit{
 	@Override
 	public double transformTo(double d, IPhysicalUnit u) throws QuantityException {
 		if(this.canTransformTo(u) == false)
-			throw new QuantityException(this.getQuantity(),u.getQuantity());
-		else{
-			if(this.canTransformTo(u) == false)
-				throw new QuantityException(this.getQuantity(),u.getQuantity());
-			
+			throw new QuantityException(this,(PhysicalUnit) u);
 			return d*this.getMeasure()/(((PhysicalUnit) u).getMeasure());
-		}
 	}
 	
 	@Override

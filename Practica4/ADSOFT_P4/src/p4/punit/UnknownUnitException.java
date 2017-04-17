@@ -1,14 +1,11 @@
 package p4.punit;
 
-public class UnknownUnitException extends Exception {
-	/**
-	 * 
-	 */
+public class UnknownUnitException extends QuantityException {
 	private static final long serialVersionUID = -6623063048010430089L;
-	Quantity q1;
+	PhysicalUnit q1;
 	
-	public UnknownUnitException(Quantity quantity){
-		this.q1 = quantity;
+	public UnknownUnitException(IPhysicalUnit q, IPhysicalUnit p){
+		super(q,null);
 	}
 	@Override
 	public String toString(){

@@ -9,15 +9,14 @@ import p4.punit.IMetricSystemConverter;
 import p4.punit.IPhysicalUnit;
 import p4.punit.Quantity;
 import p4.punit.TimeUnit;
+import p4.punit.imperial.MetricSystem;
 
-public class SiTimeMetricSystem implements IMetricSystem{
+public class SiTimeMetricSystem extends MetricSystem{
 	public static TimeUnit SECOND;
 	public static TimeUnit HOUR;
 	public static TimeUnit MILISECOND;
 	public static final SiTimeMetricSystem SYSTEM = new SiTimeMetricSystem();
 	
-	private Quantity quantity = Quantity.LONGITUD;
-	private static ArrayList<IMetricSystemConverter> converters = new ArrayList<IMetricSystemConverter>();
 	
 	private SiTimeMetricSystem(){
 		SECOND = new TimeUnit(1, SYSTEM);
@@ -25,9 +24,6 @@ public class SiTimeMetricSystem implements IMetricSystem{
 		MILISECOND = new TimeUnit(0.001, SYSTEM);
 	}
 	
-	public Quantity getQuantity() {
-		return this.quantity;
-	}
 
 	@Override
 	public IPhysicalUnit base() {
@@ -41,20 +37,5 @@ public class SiTimeMetricSystem implements IMetricSystem{
 		units.add(SECOND);
 		units.add(MILISECOND);
 		return units;
-	}
-	
-	public static void registerConverter(IMetricSystemConverter ic){
-		if (converters.contains(ic) == false){
-			converters.add(ic);
-		}
-	}
-
-	@Override
-	public IMetricSystemConverter getConverter(IMetricSystem to) {
-		for (IMetricSystemConverter imc: converters){
-			if(imc.targetSystem().equals(to))
-				return imc;
-		}
-		return null;
 	}
 }
