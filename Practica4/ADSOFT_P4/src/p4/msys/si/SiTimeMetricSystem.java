@@ -1,29 +1,18 @@
-package p4.punit.si;
+package p4.msys.si;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import p4.punit.IMetricSystem;
-import p4.punit.IMetricSystemConverter;
+import p4.msys.MetricSystem;
 import p4.punit.IPhysicalUnit;
-import p4.punit.Quantity;
 import p4.punit.TimeUnit;
-import p4.punit.imperial.MetricSystem;
 
 public class SiTimeMetricSystem extends MetricSystem{
-	public static TimeUnit SECOND;
-	public static TimeUnit HOUR;
-	public static TimeUnit MILISECOND;
 	public static final SiTimeMetricSystem SYSTEM = new SiTimeMetricSystem();
-	
-	
-	private SiTimeMetricSystem(){
-		SECOND = new TimeUnit(1, SYSTEM);
-		HOUR = new TimeUnit(3600, SYSTEM);
-		MILISECOND = new TimeUnit(0.001, SYSTEM);
-	}
-	
+	public static TimeUnit SECOND = new TimeUnit(1, "s", SYSTEM);
+	public static TimeUnit HOUR = new TimeUnit(3600, "h", SYSTEM);
+	public static TimeUnit MILISECOND = new TimeUnit(0.001, "ms", SYSTEM);
 
 	@Override
 	public IPhysicalUnit base() {

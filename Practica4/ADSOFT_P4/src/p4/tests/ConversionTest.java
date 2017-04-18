@@ -1,8 +1,11 @@
-package p4.punit.tests;
+package p4.tests;
 
-import p4.punit.*;
-import p4.punit.imperial.ImperialLengthMetricSystem;
-import p4.punit.si.SiLengthMetricSystem;
+import p4.exceptions.QuantityException;
+import p4.magnitude.IMagnitude;
+import p4.magnitude.Magnitude;
+import p4.msys.converter.SiLength2ImperialConverter;
+import p4.msys.imperial.ImperialLengthMetricSystem;
+import p4.msys.si.SiLengthMetricSystem;
 
 public class ConversionTest {
 	public static void main(String[] args) throws QuantityException {

@@ -1,25 +1,19 @@
-package p4.punit.si;
+package p4.msys.si;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import p4.punit.IMetricSystem;
-import p4.punit.IMetricSystemConverter;
+import p4.msys.MetricSystem;
 import p4.punit.IPhysicalUnit;
 import p4.punit.LengthUnit;
-import p4.punit.Quantity;
-import p4.punit.imperial.MetricSystem;
 
 public class SiLengthMetricSystem extends MetricSystem{
 	public static final SiLengthMetricSystem SYSTEM = new SiLengthMetricSystem();
-	public static final LengthUnit METER = new Meter();
-	public static final LengthUnit KILOMETER = new KiloMeter();
-	public static final LengthUnit MILIMETER = new MiliMeter();
+	public static final LengthUnit METER = new LengthUnit(1, "m", SYSTEM);
+	public static final LengthUnit KILOMETER =  new LengthUnit(1000, "km", SYSTEM);
+	public static final LengthUnit MILIMETER =  new LengthUnit(0.001, "mm", SYSTEM);
 	
-	private SiLengthMetricSystem(){
-		quantity = Quantity.LONGITUD;
-	}
 
 	@Override
 	public IPhysicalUnit base() {

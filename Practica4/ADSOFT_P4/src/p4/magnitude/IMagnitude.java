@@ -1,4 +1,7 @@
-package p4.punit;
+package p4.magnitude;
+
+import p4.exceptions.QuantityException;
+import p4.punit.IPhysicalUnit;
 
 public interface IMagnitude {
 	IMagnitude add (IMagnitude m) throws QuantityException;

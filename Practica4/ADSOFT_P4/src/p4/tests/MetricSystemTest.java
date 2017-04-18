@@ -1,8 +1,8 @@
-package p4.punit.tests;
+package p4.tests;
 
-import p4.punit.IMetricSystem;
-import p4.punit.imperial.ImperialLengthMetricSystem;
-import p4.punit.si.SiLengthMetricSystem;
+import p4.msys.imperial.ImperialLengthMetricSystem;
+import p4.msys.si.IMetricSystem;
+import p4.msys.si.SiLengthMetricSystem;
 
 public class MetricSystemTest {
 

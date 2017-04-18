@@ -1,24 +1,19 @@
-package p4.punit.imperial;
+package p4.msys.imperial;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import p4.punit.IMetricSystem;
-import p4.punit.IMetricSystemConverter;
+import p4.msys.MetricSystem;
 import p4.punit.IPhysicalUnit;
 import p4.punit.LengthUnit;
-import p4.punit.Quantity;
 
 public class ImperialLengthMetricSystem extends MetricSystem{
 	public static final ImperialLengthMetricSystem SYSTEM = new ImperialLengthMetricSystem();
-	public static LengthUnit FOOT = new Foot();
-	public static LengthUnit MILE = new Mile();
-	public static LengthUnit INCH = new Inch();
+	public static final LengthUnit FOOT = new LengthUnit(1, "ft", SYSTEM);
+	public static final LengthUnit MILE =  new LengthUnit(5280, "ml", SYSTEM);
+	public static final LengthUnit INCH =  new LengthUnit(1/12, "in", SYSTEM);
 	
-	private ImperialLengthMetricSystem(){
-		quantity = Quantity.LONGITUD;
-	}
 
 	@Override
 	public IPhysicalUnit base() {

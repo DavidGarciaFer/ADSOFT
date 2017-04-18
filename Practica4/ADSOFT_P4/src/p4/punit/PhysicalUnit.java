@@ -1,13 +1,18 @@
 package p4.punit;
 
+import p4.exceptions.QuantityException;
+import p4.msys.si.IMetricSystem;
+
 public abstract class PhysicalUnit implements IPhysicalUnit{
 	
 	private double measure; // Sirve para la conversión entre tipos 
 	private IMetricSystem sys;
+	private String abbrev;
 	
-	public PhysicalUnit(double measure, IMetricSystem sys){
+	public PhysicalUnit(double measure, String abbrev, IMetricSystem sys){
 		this.measure = measure;
 		this.sys = sys;
+		this.abbrev = abbrev;
 	}
 	
 	public double getMeasure(){
@@ -41,6 +46,10 @@ public abstract class PhysicalUnit implements IPhysicalUnit{
 	@Override
 	public String toString(){
 		return this.abbrev() + " " + this.getQuantity();
+	}
+	
+	public String abbrev(){
+		return abbrev;
 	}
 	
 }

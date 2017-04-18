@@ -1,9 +1,12 @@
 /**
  * 
  */
-package p4.punit;
+package p4.magnitude;
 
-import p4.punit.tests.TypeException;
+import p4.exceptions.QuantityException;
+import p4.exceptions.TypeException;
+import p4.msys.converter.IMetricSystemConverter;
+import p4.punit.IPhysicalUnit;
 
 /**
  * @author luis

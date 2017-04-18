@@ -3,6 +3,9 @@
  */
 package p4.punit;
 
+import p4.exceptions.QuantityException;
+import p4.msys.si.IMetricSystem;
+
 /**
  * @author davidgf
  *

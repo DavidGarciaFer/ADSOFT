@@ -1,10 +1,10 @@
-package p4.punit.tests;
+package p4.tests;
 
-import p4.punit.IMagnitude;
-import p4.punit.Magnitude;
-import p4.punit.QuantityException;
-import p4.punit.si.SiLengthMetricSystem;
-import p4.punit.si.SiTimeMetricSystem;
+import p4.exceptions.QuantityException;
+import p4.magnitude.IMagnitude;
+import p4.magnitude.Magnitude;
+import p4.msys.si.SiLengthMetricSystem;
+import p4.msys.si.SiTimeMetricSystem;
 
 public class MagnitudeTest {
 	public static void main(String[] args) throws QuantityException{

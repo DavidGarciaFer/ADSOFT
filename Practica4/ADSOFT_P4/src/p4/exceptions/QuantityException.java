@@ -1,7 +1,9 @@
 /**
  * 
  */
-package p4.punit;
+package p4.exceptions;
+
+import p4.punit.IPhysicalUnit;
 
 /**
  * @author davidgf

@@ -1,8 +1,6 @@
-package p4.punit.tests;
+package p4.exceptions;
 
 import p4.punit.IPhysicalUnit;
-import p4.punit.PhysicalUnit;
-import p4.punit.QuantityException;
 
 public class TypeException extends QuantityException{
 
