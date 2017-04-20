@@ -10,20 +10,49 @@ import p4.msys.si.IMetricSystem;
 import p4.msys.si.SiLengthMetricSystem;
 import p4.punit.IPhysicalUnit;
 
+/**
+ * Clase que implementa la interfaz IMetricSystemConverter, en este caso, da soporte al
+ * convertidor entre el sistema internacional y el imperial (con respecto a la longitud).
+ * El convertidor esta compuesto por un sistema metrico fuente, destino y un multiplicador
+ * necesario para poder pasar de un sistema a otro. 
+ * 
+ * @author David Garcia (david.garcia03@estudiante.uam.es)
+ * @author Luis Carabe (luis.carabe@estudiante.uam.es)
+ */
+
 public class SiLength2ImperialConverter implements IMetricSystemConverter{
 	private IMetricSystem source = SiLengthMetricSystem.SYSTEM;
 	private IMetricSystem target = ImperialLengthMetricSystem.SYSTEM;
 	private double multi = 3.280839895;
 	
+	/**
+	 * Metodo que devuelve el sistema metrico del que parte nuestro convertidor.
+	 * @return IMetricSystem El sistema metrico fuente, del que partimos
+	 */
+	
 	public IMetricSystem sourceSystem(){
 		return this.source;
 	}
+	
+	/**
+	 * Metodo que devuelve el sistema metrico destino de nuestro convertidor.
+	 * @return IMetricSystem El sistema metrico objetivo, el destino
+	 */
 	
 	public IMetricSystem targetSystem(){
 		return this.target;
 	}	
 	
+	/**
+	 * Metodo para transformar una magnitud del sistema fuente a una unidad del sistema destino
+	 * @param from Magnitud del sistema fuente
+	 * @param to Unidad del sistema destino
+	 * @return IMagnitude La Magnitud resultante
+	 * @throws UnknownUnitException Cuando hay problemas con la unidad destino
+	 */
+	
 	public IMagnitude transformTo(IMagnitude from, IPhysicalUnit to) throws UnknownUnitException{
+
 			if(!this.target.units().contains(to)){
 				throw new UnknownUnitException(to, null);
 			}
@@ -35,7 +64,6 @@ public class SiLength2ImperialConverter implements IMetricSystemConverter{
 			
 			try {
 				im1 = from.transformTo(from.getUnit().getMetricSystem().base());
-				
 			} catch (QuantityException e) {
 				// No necesario ya que estamos en el mismo sistema
 			}
@@ -49,6 +77,12 @@ public class SiLength2ImperialConverter implements IMetricSystemConverter{
 			return im;
 				
 	}		
+	
+	/**
+	 * Metodo que devuelve un conversor entre el sistema destino y el fuente.
+	 * @return IMetricSystemConverter Dicho conversor
+	 */
+	
 	public IMetricSystemConverter reverse(){
 		SiLength2ImperialConverter ret = new SiLength2ImperialConverter();
 		ret.target = this.source;

@@ -6,6 +6,11 @@ import p4.magnitude.Magnitude;
 import p4.msys.si.SiLengthMetricSystem;
 import p4.msys.si.SiTimeMetricSystem;
 
+/**
+ * Tester Apartado 3 de la práctica 4
+ * @author Profesores ADS
+ */
+
 public class MagnitudeTest {
 	public static void main(String[] args) throws QuantityException{
 		IMagnitude m = new Magnitude(12.5, SiLengthMetricSystem.KILOMETER);
