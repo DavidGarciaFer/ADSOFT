@@ -6,6 +6,11 @@ import p4.msys.si.SiLengthMetricSystem;
 import p4.msys.si.SiTimeMetricSystem;
 import p4.punit.IPhysicalUnit;
 
+/**
+ * Tester Apartado 1 de la práctica 4
+ * @author Profesores ADS
+ */
+
 public class PhysicalUnitTest {
 
 	public static void main(String[] args) throws QuantityException {

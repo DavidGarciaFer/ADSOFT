@@ -7,6 +7,11 @@ import p4.msys.converter.SiLength2ImperialConverter;
 import p4.msys.imperial.ImperialLengthMetricSystem;
 import p4.msys.si.SiLengthMetricSystem;
 
+/**
+ * Tester Apartado 4 de la práctica 4
+ * @author Profesores ADS
+ */
+
 public class ConversionTest {
 	public static void main(String[] args) throws QuantityException {
 		Magnitude m = new Magnitude(10, SiLengthMetricSystem.KILOMETER);
