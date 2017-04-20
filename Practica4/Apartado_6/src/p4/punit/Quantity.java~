@@ -8,7 +8,7 @@ package p4.punit;
  */
 
 public enum Quantity {
-	TIEMPO, LONGITUD, COMPUESTA;
+	TIEMPO, LONGITUD;
 	
 	public String toString(){
 		if(this.equals(TIEMPO))
@@ -17,6 +17,5 @@ public enum Quantity {
 	}
 	
 }
-
 
 
