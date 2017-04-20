@@ -38,7 +38,7 @@ public class SiLengthMetricSystem extends MetricSystem{
 	/**
 	 * Metodo que devuelve la coleccion de unidades del sistema metrico, en este caso
 	 * el km, metro y mm.
-	 * @return Collection<IPhysicalUnit> La coleccion de las unidades del sistema
+	 * @return La coleccion de las unidades del sistema
 	 */
 	
 	@Override

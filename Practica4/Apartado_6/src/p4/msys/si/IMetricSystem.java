@@ -24,7 +24,7 @@ public interface IMetricSystem {
 	
 	/**
 	 * Metodo que devuelve la coleccion de unidades del sistema metrico.
-	 * @return Collection<IPhysicalUnit> La coleccion de las unidades del sistema
+	 * @return La coleccion de las unidades del sistema
 	 */
 	Collection<IPhysicalUnit> units();
 	

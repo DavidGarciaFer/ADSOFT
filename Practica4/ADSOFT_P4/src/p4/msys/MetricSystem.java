@@ -34,7 +34,7 @@ public abstract class MetricSystem implements IMetricSystem {
 
 	/**
 	 * Metodo que devuelve la coleccion de unidades del sistema metrico.
-	 * @return Collection<IPhysicalUnit> La coleccion de las unidades del sistema
+	 * @return La coleccion de las unidades del sistema
 	 */
 	
 	@Override
@@ -50,7 +50,7 @@ public abstract class MetricSystem implements IMetricSystem {
 
 	/**
 	 * Metodo que devuelve la lista de todos los converters que contiene el sistema metrico.
-	 * @return List<IMetricSystemConverter> La lista de los converters
+	 * @return La lista de los converters
 	 */
 	
 	public List<IMetricSystemConverter> getConverters(){

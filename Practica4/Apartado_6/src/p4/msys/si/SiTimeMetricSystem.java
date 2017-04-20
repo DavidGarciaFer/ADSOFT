@@ -37,7 +37,7 @@ public class SiTimeMetricSystem extends MetricSystem{
 	/**
 	 * Metodo que devuelve la coleccion de unidades del sistema metrico, en este caso
 	 * la hora, el segundo y el milisegundo.
-	 * @return Collection<IPhysicalUnit> La coleccion de las unidades del sistema
+	 * @return  La coleccion de las unidades del sistema
 	 */
 
 	@Override

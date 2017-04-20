@@ -37,7 +37,7 @@ public class ImperialLengthMetricSystem extends MetricSystem{
 	/**
 	 * Metodo que devuelve la coleccion de unidades del sistema metrico, en este caso
 	 * la milla, el pie y la pulgada.
-	 * @return Collection<IPhysicalUnit> La coleccion de las unidades del sistema
+	 * @return La coleccion de las unidades del sistema
 	 */
 
 	@Override
