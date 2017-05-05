@@ -153,6 +153,41 @@ public class Task implements Comparable<Task>{
 	}
 	
 	/**
+	 * Añade una raíz a la tarea
+	 * @param t la tarea que actuará de raíz
+	 */
+	
+	public void addRoot(Task t){
+		Task parent = this.padre;
+		Task aux = this;
+		while (parent != null){
+			aux = parent;
+			parent = parent.getParent();
+		}
+		t.addTask(aux);
+		aux.setParent(t);
+	}
+	
+	/**
+	 * Elimina la raíz t (si resulta que es raíz)
+	 * @param t
+	 */
+	
+	public void removeRoot(Task t){
+		Task parent = this.padre;
+		Task aux = this;
+		while (parent != null){
+			aux = parent;
+			parent = parent.getParent();
+		}
+		if(aux.equals(t)){
+			for (Task tas: aux.getTasks()){
+				tas.setParent(null);
+			}
+		}
+	}
+	
+	/**
 	 * Consideramos que dos tareas son iguales si
 	 * tienen el mismo nombre (case insensitive)
 	 */
