@@ -84,23 +84,4 @@ public class ObservableObserver extends DefaultObservableProperty<Integer> imple
 		this.incrementTime(p.getValue()*(-1));
 	}
 	
-	/**
-	 * Comprueba recursivamente si la instancia es observada directa
-	 * o indirectamente por el observador pasado como argumento
-	 * @param o El posible observador de la instancia
-	 * @return True si lo observa, false en caso contrario
-	 */
-	
-	/*public boolean observado(ObservableObserver o){
-		if(this.observadores.isEmpty())
-			return false;
-		if(this.observadores.contains(o))
-			return true;
-		for(PropertyObserver<Integer> ob : this.observadores){
-			if(((ObservableObserver) ob).observado(o))
-				return true;
-		}
-		return false;
-	}*/
-	
 }

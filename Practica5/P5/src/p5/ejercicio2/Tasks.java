@@ -60,31 +60,6 @@ public class Tasks {
 		return INSTANCE;
 	}
 	
-	/**
-	 * Metodo del apartado opcional que devuelve el tiempo estimado total
-	 * @return El tiempo estimado
-	 */
-	public Integer estimatedTotal(){
-		Integer sum = new Integer(0);
-		for (Task t: tareas){
-			sum = sum + t.getEstimated().getValue();
-		}
-		return sum;
-	}
-	
-	/**
-	 * Metodo del apartado opcional que devuelve el tiempo dedicado total
-	 * @return El tiempo dedicado
-	 */
-	
-	public Integer dedicatedTotal(){
-		Integer sum = new Integer(0);
-		for (Task t: tareas){
-			sum = sum + t.getDedicated().getValue();
-		}
-		return sum;
-	}
-	
 	@Override
 	public String toString(){
 		return this.tareas.toString();

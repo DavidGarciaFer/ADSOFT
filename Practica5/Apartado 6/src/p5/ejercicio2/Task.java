@@ -52,6 +52,7 @@ public class Task implements Comparable<Task>{
 		if(t.padre != null)
 			throw new IllegalArgumentException();
 		this.tareas.add(t);
+		Tasks.getInstance().removeRoot(t); // La tarea deja de ser una raíz
 		t.padre = this;
 		this.dedicado.add(t.dedicado);
 		this.estimado.add(t.estimado);
@@ -69,13 +70,13 @@ public class Task implements Comparable<Task>{
 	public boolean removeTask(Task t){
 		if(this.containsTask(t) == false)
 			return false;
-		
-		Task padre = t.padre;
-		padre.tareas.remove(t);
-		padre.dedicado.remove(t.dedicado);
-		padre.estimado.remove(t.estimado);
+		Tasks.getInstance().addRoot(t);
+		Task padre = t.padre;		
+		padre.tareas.remove(t);		
+		padre.dedicado.remove(t.dedicado);		
+		padre.estimado.remove(t.estimado);		
 		t.padre = null;
-		
+		 // Como t no tiene padre es una raíz
 		return true;
 	}
 	
@@ -125,11 +126,11 @@ public class Task implements Comparable<Task>{
 		if(this.containsTask(t) || this.equals(t))
 			throw new IllegalArgumentException();	
 		if(this.padre == null){
-			t.addTask(this);
+			t.addTask(this); // Aquí se actualiza su valor como "no root"
 			this.padre = t;
 			return;
 		}			
-		Task old = this.padre;
+		Task old = this.padre; // En este caso ni era raíz ni lo va a ser
 		old.removeTask(this);
 		t.addTask(this);
 	}
